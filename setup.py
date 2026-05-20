@@ -7,7 +7,7 @@ long_description = (this_directory / "README.md").read_text(encoding="utf-8")
 
 setuptools.setup(
     name="streamlit-tree-select-community",
-    version="0.1.1",
+    version="0.1.3",
     author="Thilina Jayawardana",
     author_email="",
     description="A community-maintained checkbox tree component for Streamlit.",
