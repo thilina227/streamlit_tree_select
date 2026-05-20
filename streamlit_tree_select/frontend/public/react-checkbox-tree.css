@@ -300,3 +300,29 @@
   font-size: 14px;
   content: "\f053";
 }
+
+/* Dark mode theme support - use CSS variables from Streamlit parent */
+.react-checkbox-tree {
+  color: var(--text-color);
+  font-family: var(--font);
+}
+
+.rct-title {
+  color: var(--text-color) !important;
+  font-family: var(--font) !important;
+}
+
+.rct-node-icon {
+  color: var(--primary-color) !important;
+}
+
+/* Override hardcoded checkbox colors */
+.rct-icons-fa5 .rct-icon-uncheck::before {
+  color: var(--text-color) !important;
+  opacity: 0.4;
+}
+
+/* Collapse/expand arrows */
+.rct-collapse {
+  color: var(--text-color) !important;
+}
