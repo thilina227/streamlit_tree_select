@@ -1,5 +1,8 @@
-# 🐙 streamlit_tree_select
-A simple and elegant checkbox tree for Streamlit. Build on [react-checkbox-tree](https://github.com/jakezatecky/react-checkbox-tree).
+# 🐙 streamlit-tree-select-community
+
+A community-maintained checkbox tree component for Streamlit, built on [react-checkbox-tree](https://github.com/jakezatecky/react-checkbox-tree).
+
+This package is a community-maintained fork of the original [`streamlit-tree-select`](https://github.com/Schluca/streamlit_tree_select) package.
 
 <p align="center">
   <img src="./img/example.gif" alt="animated" />
@@ -7,17 +10,23 @@ A simple and elegant checkbox tree for Streamlit. Build on [react-checkbox-tree]
 
 ### Installation
 
-streamlit-tree-select is distributed via. [PyPi](https://pypi.org/project/streamlit-tree-select/):
+Install the community-maintained package from PyPI:
 
 ```
-pip install streamlit-tree-select
+pip install streamlit-tree-select-community
 ```
 
+The Python import path remains unchanged:
 
+```python
+from streamlit_tree_select import tree_select
+```
 
 ### Quickstart
-Using streamlit-tree-select is as simple as importing tree_select and passing a list of nodes.
-``` python
+
+Using streamlit-tree-select-community is as simple as importing tree_select and passing a list of nodes.
+
+```python
 import streamlit as st
 from streamlit_tree_select import tree_select
 
@@ -56,14 +65,15 @@ nodes = [
 
 return_select = tree_select(nodes)
 st.write(return_select)
-
 ```
+
 ### Properties
+
 The tree select can be customized using the following parameters:
 
 | Property             | Type     | Description                                                                                                            | Default     |
 | -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `nodes`              | list    | A list containing tree nodes and their children. A need needs to include a label and a value. Furthermore, a list of children can be added. Further possible parameters: `className` (A class Name to add to the node, default None), `disabled` (Whether the node should be disabled, default False), `showCheckbox` (Whether the node should show a checkbox, default True), `title` (A custom title attribute for th node, default None).                                                            | `[]`            |
+| `nodes`              | list    | A list containing tree nodes and their children. A node needs to include a label and a value. Furthermore, a list of children can be added. Further possible parameters: `className` (a class name to add to the node, default None), `disabled` (whether the node should be disabled, default False), `showCheckbox` (whether the node should show a checkbox, default True), `title` (a custom title attribute for the node, default None).                                                            | `[]`            |
 | `check_model`         | str   | Specifies which selected nodes should be returned. Possible inputs: "all", "leaf".                    | `'all'`    |
 | `checked`            | list    | A list of selected nodes.                                                                                       | `[]`        |
 | `direction`          | str   | Specify the direction of the component. Left-to-right ('ltr') or right-to-left ('rtl').    | `'ltr'`     |
@@ -73,12 +83,13 @@ The tree select can be customized using the following parameters:
 | `expanded`           | list    | A list of expanded node values.                                                                                      | `[]`        |
 | `no_cascade`          | bool     | If True, toggling a parent node will not cascade its check state to its children.                                  | `False`     |
 | `only_leaf_checkboxes` | bool     | If True, checkboxes will only be shown for leaf nodes.                                                                 | `False`     |
-| `show_expand_all`      | bool     | If True buttons for expanding and collapsing all parent nodes will appear in the tree.                                | `False`     |
+| `show_expand_all`      | bool     | If True, buttons for expanding and collapsing all parent nodes will appear in the tree.                                | `False`     |
 
 ### Returns
-tree_select returns a dictionary containing the keys checked node values as well as expanded node values.
+
+tree_select returns a dictionary containing the selected checked node values and expanded node values.
 
 | Property             | Type     | Description                                                                                                            | Default     |
 | -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `checked`           | list    | A list of expanded node values.                                                                                      | `[]`        |`
+| `checked`           | list    | A list of checked node values.                                                                                      | `[]`        |
 | `expanded`           | list    | A list of expanded node values.                                                                                      | `[]`        |
