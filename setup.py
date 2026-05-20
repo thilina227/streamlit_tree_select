@@ -1,14 +1,14 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-tree-select",
-    version="0.0.5",
-    author="Schluca",
+    name="streamlit-tree-select-community",
+    version="0.1.0",
+    author="Thilina Jayawardana",
     author_email="",
-    description="A simple and elegant checkbox tree for Streamlit.",
+    description="A community-maintained checkbox tree component for Streamlit.",
     long_description="",
     long_description_content_type="text/plain",
-    url="https://github.com/Schluca/streamlit_tree_select",
+    url="https://github.com/thilina227/streamlit_tree_select",
     packages=setuptools.find_packages(),
     include_package_data=True,
     classifiers=[],
